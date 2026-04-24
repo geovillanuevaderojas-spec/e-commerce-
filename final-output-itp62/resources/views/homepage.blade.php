@@ -19,7 +19,7 @@
 
        <!-- for the units to show up -->
        <!-- kailangan pa ma migrate -->
-       @foreach ($row as $unit)
+       <!-- @foreach ($row as $unit) -->
          <a href="{{$unit['page']}}" class="unit_one_link">
           <div class="unit_one">
 
@@ -49,7 +49,7 @@
               </div>
           </div>
         </a>
-        @endforeach
+        <!-- @endforeach -->
         </div>
 
     <footer class="site-footer">

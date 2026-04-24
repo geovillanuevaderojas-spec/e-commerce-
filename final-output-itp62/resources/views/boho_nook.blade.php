@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Details</title>
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    @vite('resources/css/style.css')
 </head>
 
 <body>
@@ -62,7 +62,7 @@
         <div class="more_details">
 
             <div class="unit-card">
-                <img src="assets/picture/Untitled design unit.png" class="unit-img">
+                <img src="{{ asset('images/Untitled design unit.png') }}" class="unit-img"> 
                 <div class="unit-info">
                     <h3 class="unit-name">Boho Nook</h3>
                     <div class="unit-rating"><span class="star">★</span><span class="rating-value">5.0</span></div>

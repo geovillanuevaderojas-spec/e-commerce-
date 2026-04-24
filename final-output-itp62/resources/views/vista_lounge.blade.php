@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Details</title>
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <!-- <link rel="stylesheet" href="{{asset('css/style.css')}}"> -->
+        @vite('resources/css/style.css')
     </head>
 
     <body>
@@ -58,7 +59,7 @@
             <div class="more_details">
 
                 <div class="unit-card">
-                    <img src="assets/picture/Gemini_Generated_Image_48lab648lab648la.png" alt="Unit photo" class="unit-img">
+                    <img src="{{ asset('images/Gemini_Generated_Image_48lab648lab648la.png') }}" class="unit-img"> 
 
                     <div class="unit-info">
                         <h3 class="unit-name">Vista Lounge</h3>

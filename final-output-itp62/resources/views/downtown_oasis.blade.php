@@ -60,7 +60,7 @@
             <div class="more_details">
 
                 <div class="unit-card">
-                    <img src="assets\picture\amazing-bedroom-in-condo-apartment-condo-renovations-etobicoke-768x512.jpg" alt="Unit photo" class="unit-img">
+                    <img src="{{ asset('images/amazing-bedroom-in-condo-apartment-condo-renovations-etobicoke-768x512.jpg') }}" class="unit-img"> 
 
                     <div class="unit-info">
                         <h3 class="unit-name">Downtown Oasis</h3>

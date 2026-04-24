@@ -38,3 +38,6 @@ Route::get('vista_lounge', function () {
     return view('vista_lounge');
 });
 
+Route::get('vista_lounge_info', function () {
+    return view('vista_lounge_info');
+});

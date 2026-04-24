@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>Unit Page</title>
-  <link rel="stylesheet" href="{{resources('css/unit.css')}}">
-  
+  @vite('resources/css/unit.css')
 </head>
 <body>
 
@@ -16,11 +15,11 @@
     <section class="unit-gallery">
       <h2>Boho Nook</h2>
       <div class="main-image">
-        <img src="assets\picture\loft-design-bedroom-renovation-north-york-768x558.jpg" alt="Main image of unit">
+        <img src="{{ asset('images/loft-design-bedroom-renovation-north-york-768x558.jpg') }}" alt="Main image of unit">
       </div>
       <div class="additional-images">
-        <img src="assets\picture\Gemini_Generated_Image_q5ber0q5ber0q5be.png" alt="Additional photo 1">
-        <img src="assets\picture\Gemini_Generated_Image_8yecix8yecix8yec.png" alt="Additional photo 2">
+        <img src= "{{ asset('images/Gemini_Generated_Image_q5ber0q5ber0q5be.png') }}"  alt="Additional photo 1"> 
+        <img src= "{{ asset('images/Gemini_Generated_Image_8yecix8yecix8yec.png') }}" alt="Additional photo 2"> 
       </div>
     </section>
 
@@ -48,7 +47,7 @@
           <label>CHECKOUT</label>
           <input type="text" placeholder="Add Date">
         </div>
-        <a href="downtown_oasis.html" class="book-now">Book Now</a>
+        <a href="downtown_oasis.blade.php" class="book-now">Book Now</a>
       </form>
     </aside>
   </main>

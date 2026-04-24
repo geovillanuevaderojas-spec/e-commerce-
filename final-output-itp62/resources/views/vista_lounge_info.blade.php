@@ -13,13 +13,13 @@
 
   <main class="unit-main">
     <section class="unit-gallery">
-      <h2>Downtown Oasis</h2>
+      <h2>Vista Lounge</h2>
       <div class="main-image">
         <img src="{{ asset('images/amazing-bedroom-in-condo-apartment-condo-renovations-etobicoke-768x512.jpg') }}" alt="Main image of unit">
       </div>
       <div class="additional-images">
-        <img src="{{ asset('images/Gemini_Generated_Image_wxdlr0wxdlr0wxdl.png') }}" alt="Additional photo 1"> 
-        <img src="{{ asset('images/Gemini_Generated_Image_zi0b7szi0b7szi0b.png') }}" alt="Additional photo 2"> 
+        <img src="{{ asset('images/vista-lounge-1.png') }}" alt="Additional photo 1"> 
+        <img src="{{ asset('images/vista-lounge-2.png') }}" alt="Additional photo 2"> 
       </div>
     </section>
 
