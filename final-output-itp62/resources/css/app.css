@@ -9,3 +9,193 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* login */
+#login_body {
+    @apply m-0 p-0 bg-[#f5f5f5] text-[#004030] font-[Instrument_Sans];
+}
+
+.login-title {
+    @apply font-bold font-sans;
+    @apply absolute top-[60px] left-[10%] text-[50px] text-[#004030];
+}
+
+.login-img {
+    @apply absolute right-0 top-0 w-[45%] h-[100%] h-screen object-cover -z-10;
+}
+
+.login_button,
+.signin_button {
+    @apply absolute top-[170px] w-[120px] px-4 py-2 border border-[#004030];
+    @apply bg-white text-[#004030] transition;
+}
+
+.login_button {
+    @apply left-[10%];
+}
+
+.signin_button {
+    @apply left-[18%];
+}
+
+.login_button:hover,
+.signin_button:hover {
+    @apply bg-[#004030] text-white;
+}
+
+.login,
+.sign-in {
+    @apply absolute top-[230px] left-[10%] w-[320px] bg-white border;
+    @apply border-[#004030] rounded-[15px] p-[50px_40px] shadow-lg;
+}
+
+label {
+    @apply block mt-3 text-[16px] text-[#004030];
+}
+
+input {
+    @apply w-full mt-1 p-2 border border-[#004030] rounded outline-none;
+}
+
+.loginbutton {
+    @apply w-full mt-4 py-3 bg-[#004030] text-white cursor-pointer transition;
+}
+
+.loginbutton:hover {
+    @apply opacity-80;
+}
+
+.validation {
+    @apply text-red-500 text-xs mt-1 mb-2;
+}
+
+/* homepage */
+#homepage_body {
+    @apply relative font-[Instrument_serif] text-[#004030];
+}
+
+.homepage_title {
+    @apply bg-[#004030] text-white m-0 px-[60px] py-[20px] text-[50px];
+}
+
+.homepage_content {
+    @apply pl-[30px] text-[35px] mb-[20px];
+}
+
+.homepage_paragraphs {
+    @apply pl-[30px];
+}
+
+.log_out {
+    @apply absolute top-[40px] right-[20px]
+    px-[20px] py-[10px]
+    bg-[#004030] text-white border border-white
+    rounded-full font-bold text-[15px] min-w-[100px];
+}
+
+.three_units {
+    @apply flex flex-wrap justify-center gap-[50px];
+}
+
+.unit_one {
+    @apply flex flex-col mt-[35px] text-[13px] w-[401px] pb-[50px]
+    shadow-md overflow-visible transition-all duration-300 ease-in-out;
+}
+
+.unit_one:hover {
+    @apply scale-105 shadow-xl;
+}
+
+video {
+    @apply w-full h-[250px] object-cover rounded-[10px]
+    opacity-95 transition-opacity duration-300;
+}
+
+.unit_one:hover video {
+    @apply opacity-100;
+}
+
+.unit_details {
+    @apply flex flex-row gap-[30px] ml-[10px] mt-[15px];
+}
+
+.guests,
+.beds {
+    @apply flex gap-[10px];
+}
+
+.name_of_unit {
+    @apply font-bold text-[20px] mt-[13px] ml-[10px];
+}
+
+.unitone_details {
+    @apply mt-[30px] ml-[10px];
+}
+
+.unitone_description {
+    @apply mt-[13px] ml-[10px];
+}
+
+.location_icon {
+    @apply grid w-[20px] h-[20px];
+}
+
+.unitone_location {
+    @apply flex flex-row gap-[10px] ml-[10px];
+}
+
+.location_name {
+    @apply mt-[5px];
+}
+
+.unit_one_link {
+    @apply no-underline text-inherit block;
+}
+
+.site-footer {
+    @apply bg-[#004030] text-white px-[20px] py-[40px] font-sans;
+}
+
+.footer-container {
+    @apply flex flex-wrap justify-between gap-[20px];
+}
+
+.footer-container div {
+    @apply flex-1 min-w-[200px];
+}
+
+.footer-container h3 {
+    @apply mb-[10px] text-[#e0f2e9];
+}
+
+.footer-container p,
+.footer-container ul,
+.footer-container a {
+    @apply text-[#cce5d0] text-[14px] no-underline;
+}
+
+.footer-container ul {
+    @apply list-none p-0;
+}
+
+.footer-container li {
+    @apply mb-[5px];
+}
+
+.footer-container a:hover {
+    @apply text-white underline;
+}
+
+.footer-social a {
+    @apply inline-block mr-[10px] bg-[#006643] px-[10px] py-[5px]
+    rounded transition-all duration-300;
+}
+
+.footer-social a:hover {
+    @apply bg-[#00995d] text-white -translate-y-0.5;
+}
+
+.footer-bottom {
+    @apply text-center mt-[20px] border-t border-[#006643]
+    pt-[10px] text-[12px] text-[#cce5d0];
+}

@@ -1,11 +1,11 @@
 <html>
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" href="{{asset('css/login.css')}}">
-    <link href='https://fonts.googleapis.com/css?family=Instrument+Sans' rel='stylesheet'>
+
+    @vite('resources/css/app.css')
 </head>
 
-<body>
+<body id="login_body">
 
     <h1 class="login-title">kanlungan.</h1>
 
@@ -28,7 +28,6 @@
             <input class="loginbutton" id="loginbutton" type="submit" value="Log In">
         </form>
     </div>
-
     <div class="sign-in" id="sign-in">
         <form method="POST">
             @csrf
@@ -47,7 +46,6 @@
             <input class="loginbutton" id="signinButton" type="submit" value="Sign In">
         </form>
     </div>
-
     <script src="{{asset('js/login.js')}}"></script>
 </body>
 </html>

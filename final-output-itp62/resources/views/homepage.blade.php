@@ -1,55 +1,20 @@
 <html>
     <head>
         <title>Homepage</title>
-        <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
+      
+        @vite('resources/css/app.css')
     </head>
 
-    <body>
+    <body id="homepage_body ">
         <h1 class="homepage_title">kanlungan.</h1>
 
-        <form method="POST">
-            @csrf
-            <input class="log_out" type="submit" value="Log out">
-        </form>
+       <button class="log_out" type="button">Log out</button>
         
         <h2 class="homepage_content">Available Properties</h2>
         <p class="homepage_paragraphs">Choose from our exclusive selection of 3 units</p>
 
        <div class="three_units" id="units-container">
 
-       <!-- for the units to show up -->
-       <!-- kailangan pa ma migrate -->
-       @foreach ($row as $unit)
-         <a href="{{$unit['page']}}" class="unit_one_link">
-          <div class="unit_one">
-
-              <video loop muted poster="{{$unit['mainpic']}}">
-                  <source src="{{$unit['video']}}" type="video/mp4">
-              </video>
-
-              <p class="unitone_details">{{$unit['details']}}</p>
-              <p class="name_of_unit">{{$unit['nameOfUnit']}}</p>
-              <p class="unitone_description">{{$unit['unitDescription']}}</p>
-
-              <div class="unitone_location">
-                  <img class="location_icon" src="{{$unit['location']}}">
-                  <p class="location_name">{{$unit['location-name']}}</p>
-              </div>
-
-              <div class="unit_details">
-                  <div class="guests">
-                      <img src="{{asset('images/cake.png')}}" class="location_icon">
-                      <p class="location_name">{{$unit['guest']}}</p>
-                  </div>
-
-                  <div class="beds">
-                      <img src="{{asset('images/single-bed.png')}}" class="location_icon">
-                      <p class="location_name">{{$unit['beds']}}</p>
-                  </div>
-              </div>
-          </div>
-        </a>
-        @endforeach
         </div>
 
     <footer class="site-footer">
@@ -91,6 +56,5 @@
 </footer>
 
     <script src="{{asset('js/homepage.js')}}"></script>
-    <!-- <script src="{{asset('js/inner.js')}}"></script> -->
     </body>
 </html>
