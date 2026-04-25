@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Booking - {{ $unit->name }}</title>
-     @vite('resources/css/style.css')
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"> 
+
 </head>
 
 <body>
@@ -12,7 +13,7 @@
 
         <div class="details">
 
-        <form method="POST" action="#" class="booking_informations">
+        <form method="POST" action="/units/{{ $unit->slug }}/booking" class="booking_informations" id="booking-form">
             @csrf
             <p class="details_title">BOOKING INFORMATION</p>
             <input type="hidden" name="unit_id" value="{{ $unit->id }}">
@@ -20,11 +21,11 @@
             <div class="booking_information">
                 <div class="input-group">
                     <label class="check_in">Check-In</label>
-                    <input type="date" name="check_in" class="check_in_container" required> 
+                    <input type="date" name="check_in" value="{{ $check_in }}" id="check_in" class="check_in_container" min="{{ date('Y-m-d') }}" required>  
                 </div>
                 <div class="input-group">
                     <label class="check_out">Check-Out</label>
-                    <input type="date" name="check_out" class="check_in_container" required>
+                    <input type="date" name="check_out" value="{{ $check_out }}"id="check_out"  class="check_in_container" min="{{ date('Y-m-d') }}" required>
                 </div>
             </div>
 
@@ -75,7 +76,6 @@
                 </div>
             </div>
             
-            </form>
 
         <div class="more_details">
             <div class="unit-card">
@@ -121,11 +121,44 @@
                         <label class="conditions">Send me promotional emails and special offers</label>
                     </div>
                 </div>
-
                 <button class="book_now" type="submit" form="booking-form">Book Now</button>
+                @if(session('error'))
+                    <p style="color:red;">{{ session('error') }}</p>
+                @endif
             </div>
         </div>
-
+     </form>
     </div>
+    <script>
+        const pricePerNight = 4999;
+        const cleaningFee = 500;
+        const serviceFee = 500;
+
+        const checkInInput = document.getElementById('check_in');
+        const checkOutInput = document.getElementById('check_out');
+
+        function calculatePrice() {
+            const checkIn = new Date(checkInInput.value);
+            const checkOut = new Date(checkOutInput.value);
+
+            if (!checkInInput.value || !checkOutInput.value) return;
+
+            const timeDiff = checkOut - checkIn;
+            const nights = timeDiff / (1000 * 60 * 60 * 24);
+
+            if (nights <= 0) return;
+
+            const unitTotal = nights * pricePerNight;
+            const total = unitTotal + cleaningFee + serviceFee;
+
+            document.getElementById('unitPrice').innerText = "Php " + unitTotal;
+            document.getElementById('totalPrice').innerText = "Php " + total;
+        }
+
+        checkInInput.addEventListener('change', calculatePrice);
+        checkOutInput.addEventListener('change', calculatePrice);
+
+        calculatePrice();
+    </script>
 </body>
 </html>

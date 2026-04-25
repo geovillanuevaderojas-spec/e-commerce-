@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>About Us</title>
-  @vite('resources/css/unit.css')
+<link rel="stylesheet" href="{{asset('css/unit.css')}}"> 
+
 </head>
 <body>
 

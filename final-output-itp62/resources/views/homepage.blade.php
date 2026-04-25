@@ -1,8 +1,7 @@
 <html>
     <head>
         <title>Homepage</title>
-        <!-- <link rel="stylesheet" href="{{asset('css/style.css')}}"> -->
-         @vite('public/css/homepage.css')
+        <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
     </head>
 
     <body>

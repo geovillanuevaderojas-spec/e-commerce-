@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>{{ $unit->name }}</title>
-   <!-- <link rel="stylesheet" href="{{asset('css/unit.css')}}"> -->
-  @vite('resources/css/unit.css')
+   <link rel="stylesheet" href="{{asset('css/unit.css')}}"> 
 </head>
 <body>
 
