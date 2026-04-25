@@ -1,36 +1,42 @@
 /* Detail CSS*/
-
+ *{
+  margin: 0px;
+ }
 .details {
   display: flex;
   flex-direction: row;
-  margin-left: 150px;
-  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: flex-start;  
+  gap: 20px;             
+  padding: 20px;
+  margin: 0px;
 }
 
 .more_details {
   display: flex;
   flex-direction: column;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
-  overflow: visible;
   width: 100%;
-  padding-left: 30px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 30px;
   margin-top: 30px;
   max-width: 450px;
+  height: fit-content;
 }
 
 .booking_informations {
   display: flex;
   flex-direction: column;
+  flex: 1;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
-  overflow: visible;
-  width: 100%;
-  margin-left: 10px;
-  padding-left: 30px;
-  padding-bottom: 40px;
+  padding: 30px;
   margin-top: 30px;
   max-width: 600px;
+}
+.booking_informations label {
+  position: static; 
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .booking_information {
@@ -38,162 +44,57 @@
   flex-direction: row;
 }
 
-.check_in {
-  position: absolute;
-  top: 195px;
-  left: 270px;
-  font-weight: bold;
-  font-size: large;
-  
-}
-
-.check_out {
-  position: absolute;
-  top: 195px;
-  left: 530px;
-  font-weight: bold;
-  font-size: large;
-}
-
-.check_in_container {
-  text-align: center;
-  height: 50px;
-  width: 253px;
-  padding-top: 13px;
-  padding-bottom: 0;
-}
-
-.message_text {
-  position: absolute;
-  top: 265px;
-  left: 270px;
-  font-weight: bold;
-  font-size: large;
-}
-
-.message {
-  text-align: center;
-  height: 50px;
-  width: 508px;
-  padding-top: 13px;
-  padding-bottom: 0;
-}
-
-.guest_information {
+.booking_information, .guest_information, .payment_information {
   display: flex;
   flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.name_container {
-  text-align: center;
-  height: 50px;
-  width: 250px;
-  padding-top: 13px;
-  padding-bottom: 0;
-}
-
-.first_name {
- position: absolute;
-  top: 385px;
-  left: 270px;
-  font-weight: bold;
-  font-size: large;
-}
-
-.last_name {
-  position: absolute;
-  top: 385px;
-  left: 530px;
-  font-weight: bold;
-  font-size: large;
-}
-
-.additional_information {
+.input-group {
+  flex: 1; 
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.email_container {
-  text-align: center;
-  height: 60px !important;
-  width: 515px !important;
-  padding-top: 20px !important;
-  padding-bottom: 0;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.email {
-  position: absolute;
-  top: 455px;
-  left: 270px;
+.check_in, .check_out, .message_text, .first_name, .last_name, 
+.email, .phone_number, .card_number, .expiry, .cvv {
+  position: static; 
   font-weight: bold;
-  font-size: large;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.phone_number_container {
-  text-align: center;
-  height: 50px;
-  width: 508px !important;
-  padding-top: 20px !important;
-  padding-bottom: 0;
-  margin-top: 0 !important;
+input.phone_number_container::-webkit-outer-spin-button,
+input.phone_number_container::-webkit-inner-spin-button{
+    appearance: none;
+    margin: 0;
 }
 
-.phone_number {
-  position: absolute;
-  top: 515px;
-  left: 270px;
-  font-weight: bold;
-  font-size: large;
+input[type=number].phone_number_container{
+    appearance: textfield;
+}
+  
+ .check_in_container, .name_container, .payment_container {
+  width: 100% !important; 
+  height: 45px;
+  text-align: left;
 }
 
-.card_number_container {
-  text-align: center;
-  height: 50px;
-  width: 508px !important;
-  padding-top: 20px !important;
-  padding-bottom: 0;
-  margin-top: 0 !important;
-}
-
-.card_number {
-  position: absolute;
-  top: 645px;
-  left: 270px;
-  font-weight: bold;
-  font-size: large;
-}
-
-.payment_information {
-  display: flex;
-  flex-direction: row;
-}
-
-.payment_container {
-  text-align: center;
-  height: 50px;
-  width: 250px !important;
-  padding-top: 20px !important;
-  padding-bottom: 0;
-  margin-top: 0 !important;
-}
-
-.expiry {
- position: absolute;
-  top: 715px;
-  left: 270px;
-  font-weight: bold;
-  font-size: large;
-}
-
-.cvv {
-   position: absolute;
-  top: 715px;
-  left: 530px;
-  font-weight: bold;
-  font-size: large;
-}
+.message, .email_container, .phone_number_container, .card_number_container {
+  width: 100% !important;
+  height: 45px;
+  margin-bottom: 15px;
+} 
+.check_in_container, .name_container, .email_container, .phone_number_container, .card_number_container, .payment_container, .message {
+  width: 100% !important; 
+  height: 45px;
+  box-sizing: border-box; 
+  padding: 0 10px;      
+}  
 
 
 .unit-card {
@@ -250,29 +151,18 @@ hr {
   border: none;
   height: 1px;
   background-color: #004030;
-  width: 400px;
-  margin-top: 0;
-  margin-left: 0;
+  width: 100%; 
+  margin: 10px 0;
 }
 
-.unit_price {
+.unit_price, .cleaning_price, .service_fee, .total {
   display: flex;
   flex-direction: row;
-  gap: 104px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0; 
 }
 
-.prices {
-  font-size: 30px;
-  color: black;
-  font-family: 'Instrument serif', sans-serif;
-  margin: 5px;
-}
-
-.cleaning_price {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
 
 .service_fee {
   display: flex;
@@ -280,20 +170,18 @@ hr {
   gap: 75px;
 }
 
-.total {
-  display: flex;
-  flex-direction: row;
-  gap: 170px;
+
+.terms_conditions, .special_offers {
+  cursor: pointer;
+  border: 2px solid #004030;
 }
 
-.terms_conditions_container {
-  display: flex;
-  flex-direction: row;
-}
-
+.terms_conditions_container,
 .special_offers_container {
   display: flex;
   flex-direction: row;
+  align-items: center; 
+  gap: 10px;           
 }
 
 .agreements {
@@ -308,11 +196,14 @@ hr {
 }
 
 .book_now {
-  width: 400px;
-  height: 80px;
-  font-size: 25px;
+  width: 100%; 
+  height: 60px; 
+  font-size: 20px;
   background-color: #004030;
   color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .details_title {
@@ -320,6 +211,9 @@ hr {
   font-size: large;
   font-family: 'Instrument serif', sans-serif;
   font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-right: 10px;
 }
 
 @media (max-width: 1300px) {
@@ -442,8 +336,8 @@ body {
     background-color: #004030;
     color: white;
     margin: 0;
-    padding: 20px 60px;
-    font-size: 50px;
+    padding: 20px 40px;
+    font-size: 40px;
 }
 
 .homepage_content {
@@ -461,7 +355,21 @@ body {
     border: 1px solid white;
     position: absolute;
     left: 90%;
-    top: 40px;
+    top: 20px;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 40px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.back_btn{
+    background-color: #004030;
+    border: 1px solid white;
+    position: absolute;
+    left: 80%;
+    top: 20px;
     font-size: 15px;
     padding: 10px 20px;
     color: white;
@@ -555,7 +463,7 @@ video {
 .site-footer {
     background-color: #004030;
     color: #fff;
-    padding: 40px 20px 20px;
+
     font-family: Arial, sans-serif;
 }
 
@@ -795,7 +703,7 @@ video {
 }
 
 
-/* Responsive
+
 @media(max-width: 1100px) {
   .unit-main {
     grid-template-columns: 1fr;
@@ -819,12 +727,10 @@ video {
   }
 
   .more_details, .booking_informations {
-    width: 90%;
-    min-width: unset;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  flex: 0 1 auto; 
+  margin-top: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 30px;
   }
 
   .check_in, .check_out, .message_text, .first_name, .last_name, 
@@ -920,6 +826,4 @@ video {
     font-size: 28px;
   }
 }
-
-*/
 

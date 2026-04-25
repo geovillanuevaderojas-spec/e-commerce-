@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Homepage</title>
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
     </head>
 
     <body>
