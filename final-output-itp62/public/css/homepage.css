@@ -1,4 +1,7 @@
 /* GLOBAL (used by homepage) */
+*{
+  margin: 0px;
+ }
 body {
     font-family: 'Instrument serif', sans-serif;
     color: #004030;
@@ -8,11 +11,12 @@ body {
     background-color: #004030;
     color: white;
     margin: 0;
-    padding: 20px 60px;
-    font-size: 50px;
+    padding: 20px 40px;
+    font-size: 40px;
 }
 
 .homepage_content {
+    padding-top: 30px;
     padding-left: 30px;
     font-size: 35px;
     margin-bottom: 20px;
@@ -27,7 +31,21 @@ body {
     border: 1px solid white;
     position: absolute;
     left: 90%;
-    top: 40px;
+    top: 20px;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 40px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.back_btn{
+    background-color: #004030;
+    border: 1px solid white;
+    position: absolute;
+    left: 80%;
+    top: 20px;
     font-size: 15px;
     padding: 10px 20px;
     color: white;
@@ -41,6 +59,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+    padding-bottom: 30px;
 }
 
 .unit_one {
