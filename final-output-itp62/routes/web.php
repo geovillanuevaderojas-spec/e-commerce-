@@ -25,3 +25,8 @@ Route::get('/units/{slug}/booking', [BookingController::class, 'create']);
 
 Route::post('/units/{slug}/booking', [BookingController::class, 'store']);
 
+Route::get('/about', function () {
+    return view('about_us');
+});
+
+
