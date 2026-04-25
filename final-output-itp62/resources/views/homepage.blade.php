@@ -19,37 +19,38 @@
 
        <!-- for the units to show up -->
        <!-- kailangan pa ma migrate -->
-       <!-- @foreach ($row as $unit) -->
-         <a href="{{$unit['page']}}" class="unit_one_link">
-          <div class="unit_one">
+@foreach ($units as $unit)
+<a href="{{ url('/units/' . $unit->slug) }}" class="unit_one_link">
+    <div class="unit_one">
 
-              <video loop muted poster="{{$unit['mainpic']}}">
-                  <source src="{{$unit['video']}}" type="video/mp4">
-              </video>
+        <video loop muted poster="{{ asset($unit->mainpic) }}">
+            <source src="{{ asset($unit->video) }}" type="video/mp4">
+        </video>
 
-              <p class="unitone_details">{{$unit['details']}}</p>
-              <p class="name_of_unit">{{$unit['nameOfUnit']}}</p>
-              <p class="unitone_description">{{$unit['unitDescription']}}</p>
+        <p class="unitone_details">{{ $unit->details }}</p>
+        <p class="name_of_unit">{{ $unit->name }}</p>
+        <p class="unitone_description">{{ $unit->description }}</p>
 
-              <div class="unitone_location">
-                  <img class="location_icon" src="{{$unit['location']}}">
-                  <p class="location_name">{{$unit['location-name']}}</p>
-              </div>
+        <div class="unitone_location">
+            <img class="location_icon" src="{{ asset($unit->location_image) }}">
+            <p class="location_name">{{ $unit->location_name }}</p>
+        </div>
 
-              <div class="unit_details">
-                  <div class="guests">
-                      <img src="{{asset('images/cake.png')}}" class="location_icon">
-                      <p class="location_name">{{$unit['guest']}}</p>
-                  </div>
+        <div class="unit_details">
+            <div class="guests">
+                <img src="{{ asset('images/cake.png') }}" class="location_icon">
+                <p class="location_name">{{ $unit->guests }}</p>
+            </div>
 
-                  <div class="beds">
-                      <img src="{{asset('images/single-bed.png')}}" class="location_icon">
-                      <p class="location_name">{{$unit['beds']}}</p>
-                  </div>
-              </div>
-          </div>
-        </a>
-        <!-- @endforeach -->
+            <div class="beds">
+                <img src="{{ asset('images/single-bed.png') }}" class="location_icon">
+                <p class="location_name">{{ $unit->beds }}</p>
+            </div>
+        </div>
+
+    </div>
+</a>
+@endforeach
         </div>
 
     <footer class="site-footer">
