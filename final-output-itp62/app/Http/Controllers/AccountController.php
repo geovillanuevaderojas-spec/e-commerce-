@@ -23,13 +23,18 @@ class AccountController extends Controller
 
     public function register(Request $request)
     {
-        Account::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-        ]);
-
-        return redirect('/')->with('success', 'Account created!');
+        try {
+           
+            Account::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => bcrypt($request->password),
+            ]);
+            return redirect('/')->with('success', 'Account created!');
+            
+        } catch (\Illuminate\Database\UniqueConstraintViolationException $e) {
+             return back()->with('emailError', 'Email might already exist...');
+        }
     }
 
     public function logout()

@@ -18,33 +18,45 @@
         <form method="POST" action="/login">
             @csrf
             <label for="email">Email</label> <br>
-            <input type="email" placeholder="Enter Email" name="email" id="email"> <br>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required> <br>
             <p id="emailError" class="validation"></p>
 
             <label for="password">Password</label> <br>
-            <input type="password" placeholder="Enter Password" name="password" id="password"> <br>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required> <br>
             <p id="password_Error" class="validation"></p>
+
+            @if(session('error'))
+                <label id="loginLabel">{{session('error')}}</label>
+            @endif
 
             <input class="loginbutton" id="loginbutton" type="submit" value="Log In">
         </form>
     </div>
 
     <div class="sign-in" id="sign-in">
-        <form method="POST" action="/register">
+        <form method="POST" action="/register" id="signinform">
             @csrf
             <label for="name">Name</label> <br>
-            <input type="text" placeholder="Enter Name" name="name" class="name_detail" id="signin_nameDetail"> <br>
+            <input type="text" placeholder="Enter Name" name="name" class="name_detail" id="signin_nameDetail" required> <br>
             <p id="nameError" class="validation"></p>
             
             <label for="email">Email</label> <br>
-            <input type="email" placeholder="Enter Email" name="email" id="signin_email"> <br>
+            <input type="email" placeholder="Enter Email" name="email" id="signin_email" required> <br>
             <p id="signin-emailError" class="validation"></p>
 
             <label for="password">Password</label> <br>
-            <input type="password" placeholder="Enter Password" name="password" id="signin_password"> <br>
+            <input type="password" placeholder="Enter Password" name="password" id="signin_password" required> <br>
             <p id="signin-passwordError" class="validation"></p>
 
-            <input class="loginbutton" id="signinButton" type="submit" value="Sign In">
+            @if(session('success'))
+                <label id="signinLabel">{{session('success')}}</label>
+                <script>window.showSigninAfterRegister = true;</script>
+            @elseif(session('emailError'))
+                <label id="signinLabel">{{session('emailError')}}</label>
+                <script>window.showSigninAfterRegister = true;</script>
+            @endif
+
+            <input class="loginbutton" type="submit" value="Sign In">
         </form>
     </div>
 
