@@ -10,7 +10,7 @@
     <button class="log_out" type="submit">Logout</button>
     <button class="back_btn">Back</button>
 
-    <div class="details">
+        <div class="details">
 
         <form method="POST" action="#" class="booking_informations">
             @csrf

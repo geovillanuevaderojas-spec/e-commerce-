@@ -13,9 +13,8 @@
             <input class="log_out" type="submit" value="Logout">
         </form>
         
-        
-        <h2 class="homepage_content">Available Properties</h2>
-        <p class="homepage_paragraphs">Choose from our exclusive selection of 3 units</p>
+        <h2 class="homepage_content">Welcome to kanlungan, {{ session('user')->name }}</h2>
+        <p class="homepage_paragraphs">Choose from our exclusive selection of units</p>
 
        <div class="three_units" id="units-container">
 

@@ -51,15 +51,26 @@
     <form>
       <div class="booking-date">
         <label>CHECK-IN</label>
-        <input type="text" placeholder="Add Date">
+        <input type="date" id="check_in" min="{{ date('Y-m-d') }}">
       </div>
 
       <div class="booking-date">
         <label>CHECKOUT</label>
-        <input type="text" placeholder="Add Date">
+        <input type="date" id="check_out" min="{{ date('Y-m-d') }}">
       </div>
 
-      <a href="{{ url('/units/' . $unit->slug . '/booking') }}" class="book-now">Book Now</a>
+      <a href="{{ url('/units/' . $unit->slug . '/booking') }}"
+        onclick="
+        if(!document.getElementById('check_in').value || !document.getElementById('check_out').value){
+            alert('Select dates first');
+            return false;
+        }
+        this.href += '?check_in=' + document.getElementById('check_in').value + 
+                    '&check_out=' + document.getElementById('check_out').value;
+        "
+        class="book-now">
+        Book Now
+        </a>
     </form>
   </aside>
 
