@@ -9,6 +9,10 @@ class UnitController extends Controller
 {
      public function index()
     {
+
+        if (!session('user')) {
+            return redirect('/');
+        }
         $units = Unit::all();
         return view('homepage', compact('units'));
     }

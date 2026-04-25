@@ -15,7 +15,7 @@
     <img class="login-img" src="{{asset('images/Gemini_Generated_Image_3hf23p3hf23p3hf2.png')}}" alt="login-img">
 
     <div class="login" id="login">
-        <form method="POST">
+        <form method="POST" action="/login">
             @csrf
             <label for="email">Email</label> <br>
             <input type="email" placeholder="Enter Email" name="email" id="email"> <br>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="sign-in" id="sign-in">
-        <form method="POST">
+        <form method="POST" action="/register">
             @csrf
             <label for="name">Name</label> <br>
             <input type="text" placeholder="Enter Name" name="name" class="name_detail" id="signin_nameDetail"> <br>
