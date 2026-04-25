@@ -112,12 +112,12 @@
 
                 <div class="agreements">
                     <div class="terms_conditions_container">
-                        <input type="radio" name="terms_conditions" class="terms_conditions" required>
-                        <label class="conditions" form="booking-form">I agree to the Terms and Conditions</label>
+                        <input type="radio" name="terms_conditions" class="terms_conditions" form="booking-form" required>
+                        <label class="conditions">I agree to the Terms and Conditions</label>
                     </div>
                     <div class="special_offers_container">
-                        <input type="radio" name="special_offers" class="special_offers">
-                        <label class="conditions" form="booking-form">Send me promotional emails and special offers</label>
+                        <input type="radio" name="special_offers" class="special_offers" form="booking-form">
+                        <label class="conditions">Send me promotional emails and special offers</label>
                     </div>
                 </div>
                 <button class="book_now" type="submit" form="booking-form">Book Now</button>
