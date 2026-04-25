@@ -442,7 +442,7 @@ body {
     background-color: #004030;
     color: white;
     margin: 0;
-    padding: 15px 30px;
+    padding: 20px 60px;
     font-size: 50px;
 }
 
@@ -555,7 +555,7 @@ video {
 .site-footer {
     background-color: #004030;
     color: #fff;
-    padding: 40px 20px 20px 0px;
+    padding: 40px 20px 20px;
     font-family: Arial, sans-serif;
 }
 
@@ -647,7 +647,7 @@ video {
 
 .unit-header h1 {
   margin: 0;
-  font-size: 35x;
+  font-size: 40px;
   font-family: 'Instrument serif', sans-serif;
 }
 

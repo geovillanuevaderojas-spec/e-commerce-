@@ -1,16 +1,15 @@
 <html>
     <head>
         <title>Homepage</title>
-        <!-- <link rel="stylesheet" href="{{asset('css/style.css')}}"> -->
-         @vite('public/css/homepage.css')
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
     </head>
 
     <body>
         <h1 class="homepage_title">kanlungan.</h1>
-        <button class="back_btn">Back</button>
-        <form method="POST">
+
+        <form method="POST" action="/logout">
             @csrf
-            <input class="log_out" type="submit" value="Logout">
+            <input class="log_out" type="submit" value="Log out">
         </form>
         
         <h2 class="homepage_content">Welcome to kanlungan, {{ session('user')->name }}</h2>
