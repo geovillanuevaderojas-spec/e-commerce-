@@ -1,16 +1,18 @@
 <html>
     <head>
         <title>Homepage</title>
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <!-- <link rel="stylesheet" href="{{asset('css/style.css')}}"> -->
+         @vite('public/css/homepage.css')
     </head>
 
     <body>
         <h1 class="homepage_title">kanlungan.</h1>
-
+        <button class="back_btn">Back</button>
         <form method="POST">
             @csrf
-            <input class="log_out" type="submit" value="Log out">
+            <input class="log_out" type="submit" value="Logout">
         </form>
+        
         
         <h2 class="homepage_content">Available Properties</h2>
         <p class="homepage_paragraphs">Choose from our exclusive selection of 3 units</p>

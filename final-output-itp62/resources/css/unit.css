@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Instrument serif', sans-serif;
 }
 
 body {
@@ -25,13 +26,31 @@ body {
 }
 
 .log_out {
-  background-color: white;
-  color: #004030;
-  border: none;
+  background-color: #004030;
+  border: 1px solid white;
+  position: absolute;
+  left: 90%;
+  top: 20px;
+  font-size: 15px;
   padding: 10px 20px;
-  border-radius: 30px;
+  color: white;
+  border-radius: 40px;
   font-weight: bold;
-  cursor: pointer;
+  min-width: 100px;
+}
+
+.back_btn{
+    background-color: #004030;
+    border: 1px solid white;
+    position: absolute;
+    left: 80%;
+    top: 20px;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 40px;
+    font-weight: bold;
+    min-width: 100px;
 }
 
 .unit-main {
@@ -119,7 +138,7 @@ body {
 }
 
 .booking-date {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .booking-date label {
