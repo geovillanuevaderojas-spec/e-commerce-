@@ -120,7 +120,9 @@
                         </div>
 
                         <button class="book_now" type="submit">Book Now</button>
-
+                            @if(session('error'))
+                                <p style="color:red;">{{ session('error') }}</p>
+                            @endif
                     </div>
                 </div>
 
