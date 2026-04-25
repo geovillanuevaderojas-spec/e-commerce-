@@ -26,7 +26,7 @@ public function store(Request $request, $slug)
     if (!session('user')) return redirect('/');
 
     $unit = Unit::where('slug', $slug)->firstOrFail();
-    
+
     $conflict = Booking::where('unit_id', $unit->id)
         ->where(function ($query) use ($request) {
             $query->whereBetween('check_in', [$request->check_in, $request->check_out])
@@ -54,6 +54,10 @@ public function store(Request $request, $slug)
         'message' => $request->message,
     ]);
 
-    return redirect('/home')->with('success', 'Booking successful!');
+    return view('booking_confirmation', [
+        'unit' => $unit,
+        'check_in' => $request->check_in,
+        'check_out' => $request->check_out,
+    ]);
 }
 }
