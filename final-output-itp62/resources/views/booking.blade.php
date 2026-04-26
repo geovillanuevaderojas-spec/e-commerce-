@@ -8,13 +8,14 @@
 
 <body>
     <h1 class="homepage_title">kanlungan.</h1>
-    <button class="log_out" type="submit">Logout</button>
-    <button class="back_btn">Back</button>
+    
 
         <div class="details">
 
         <form method="POST" action="/units/{{ $unit->slug }}/booking" class="booking_informations" id="booking-form">
             @csrf
+            <button class="log_out" type="submit">Logout</button>
+            <button class="back_btn" type="button" onclick="window.history.back()">Back</button>
             <p class="details_title">BOOKING INFORMATION</p>
             <input type="hidden" name="unit_id" value="{{ $unit->id }}">
 

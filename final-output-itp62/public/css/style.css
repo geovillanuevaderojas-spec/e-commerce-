@@ -228,7 +228,61 @@ hr {
     }
   }
 
- /* about us */
+  /* MY BOOKINGS */
+  .my-booking-container{
+    overflow: hidden;
+  }
+  .my-bookings {
+    text-align: left;     
+    width: 100%;            
+    margin-top: 40px;    
+    margin-left: 40px;    
+    color: #004030;          
+    font-size: 40px;
+  }
+  .bookings-container {
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-family: 'Instrument serif', sans-serif;
+    color: #004030;
+  }
+
+  .bookings-table th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid #004030;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .bookings-table td {
+      padding: 20px 15px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 18px;
+  }
+
+  .status-confirmed {
+    color: #004030;
+    font-weight: bold;
+    border: 1px solid #004030;
+    padding: 5px 10px;
+    border-radius: 4px;
+ }
+
+  .unit-name-cell {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+ /*ABOUT US*/
  .abt-text{
     font-size: 30px;
     text-align: center;
@@ -423,13 +477,22 @@ body {
     border-radius: 40px;
     font-weight: bold;
     min-width: 100px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.log_out:hover {
+    background-color: white;
+    color: #004030;
+    border: 1px solid #004030; 
 }
 
 .back_btn{
     background-color: #004030;
     border: 1px solid white;
     position: absolute;
-    left: 80%;
+    left: 83%;
     top: 20px;
     font-size: 15px;
     padding: 10px 20px;
@@ -437,6 +500,15 @@ body {
     border-radius: 40px;
     font-weight: bold;
     min-width: 100px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back_btn:hover{
+  background-color: white;
+  color: #004030;
+  border: 1px solid #004030; 
 }
 
 .three_units {
