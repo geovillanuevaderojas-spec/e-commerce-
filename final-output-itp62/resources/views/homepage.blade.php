@@ -5,12 +5,7 @@
     </head>
 
     <body>
-        <h1 class="homepage_title">kanlungan.</h1>
-        <button class="back_btn">Back</button>
-        <form method="POST">
-            @csrf
-            <input class="log_out" type="submit" value="Logout">
-        </form>
+        @include('header')
         
         <h2 class="homepage_content">Welcome to kanlungan, {{ session('user')->name }}</h2>
         <p class="homepage_paragraphs">Choose from our exclusive selection of units</p>

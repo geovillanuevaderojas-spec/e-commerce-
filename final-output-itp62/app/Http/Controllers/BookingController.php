@@ -60,4 +60,16 @@ public function store(Request $request, $slug)
         'check_out' => $request->check_out,
     ]);
 }
+
+public function index()
+{
+    if (!session('user')) return redirect('/');
+
+    $bookings = Booking::where('account_id', session('user')->id)
+        ->with('unit')
+        ->latest()
+        ->get();
+
+    return view('my_bookings', compact('bookings'));
+}
 }
