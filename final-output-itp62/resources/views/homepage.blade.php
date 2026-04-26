@@ -1,29 +1,27 @@
 <html>
-    <head>
-        <title>Homepage</title>
-        <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
-    </head>
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
+</head>
 
-    <body>
-        <h1 class="homepage_title">kanlungan.</h1>
-        <button class="back_btn">Back</button>
-        <form method="POST">
-            @csrf
-            <input class="log_out" type="submit" value="Logout">
-        </form>
+<body>
+    <header class="navbar_header">
+    <h1 class="homepage_title">kanlungan.</h1>
+    
+    <form method="POST" action="/logout">
+        @csrf
+        <input class="log_out" type="submit" value="Log out">
+    </form>
+    </header>
         
-        <h2 class="homepage_content">Welcome to kanlungan, {{ session('user')->name }}</h2>
-        <p class="homepage_paragraphs">Choose from our exclusive selection of units</p>
+    <h2 class="homepage_content">Welcome to kanlungan, {{ session('user')->name }}</h2>
+    <p class="homepage_paragraphs">Choose from our exclusive selection of units</p>
 
-       <div class="three_units" id="units-container">
-
-       <!-- for the units to show up -->
-       <!-- kailangan pa ma migrate -->
-@foreach ($units as $unit)
-<a href="{{ url('/units/' . $unit->slug) }}" class="unit_one_link">
+    <div class="three_units" id="units-container">
+    @foreach ($units as $unit)
+    <a href="{{ url('/units/' . $unit->slug) }}" class="unit_one_link">
     <div class="unit_one">
-
-        <video loop muted poster="{{ asset($unit->mainpic) }}">
+    <video loop muted poster="{{ asset($unit->mainpic) }}">
             <source src="{{ asset($unit->video) }}" type="video/mp4">
         </video>
 

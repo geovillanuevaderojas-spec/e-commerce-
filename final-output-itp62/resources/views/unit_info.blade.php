@@ -9,7 +9,7 @@
 <header class="unit-header">
   <h1>kanlungan.</h1>
   <button class="log_out">Logout</button>
-  <button class="back_btn">Back</button>
+   <button class="back_btn" type="button" onclick="window.history.back()">Back</button>
 </header>
 
 <main class="unit-main">

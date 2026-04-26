@@ -8,13 +8,14 @@
 
 <body>
     <h1 class="homepage_title">kanlungan.</h1>
-    <button class="log_out" type="submit">Logout</button>
-    <button class="back_btn">Back</button>
+    
 
         <div class="details">
 
         <form method="POST" action="/units/{{ $unit->slug }}/booking" class="booking_informations" id="booking-form">
             @csrf
+            <button class="log_out" type="submit">Logout</button>
+            <button class="back_btn" type="button" onclick="window.history.back()">Back</button>
             <p class="details_title">BOOKING INFORMATION</p>
             <input type="hidden" name="unit_id" value="{{ $unit->id }}">
 
@@ -75,8 +76,7 @@
                     <input type="text" name="cvv" placeholder="123" class="payment_container" required>
                 </div>
             </div>
-            
-
+        </form>
         <div class="more_details">
             <div class="unit-card">
                 <img src="{{ asset($unit->mainpic) }}" class="unit-img"> 
@@ -113,11 +113,11 @@
 
                 <div class="agreements">
                     <div class="terms_conditions_container">
-                        <input type="radio" name="terms_conditions" class="terms_conditions" required>
+                        <input type="radio" name="terms_conditions" class="terms_conditions" form="booking-form" required>
                         <label class="conditions">I agree to the Terms and Conditions</label>
                     </div>
                     <div class="special_offers_container">
-                        <input type="radio" name="special_offers" class="special_offers">
+                        <input type="radio" name="special_offers" class="special_offers" form="booking-form">
                         <label class="conditions">Send me promotional emails and special offers</label>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                 @endif
             </div>
         </div>
-     </form>
+     
     </div>
     <script>
         const pricePerNight = 4999;
