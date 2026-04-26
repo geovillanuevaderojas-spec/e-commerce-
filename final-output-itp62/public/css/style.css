@@ -237,16 +237,131 @@ hr {
 @media (max-width: 1300px) {
   .details {
     flex-direction: column;
+    }
   }
-}
 
 @media (max-width: 1300px) {
   .three_units {
     flex-direction: column;
+    }
   }
+
+  /* MY BOOKINGS */
+  .my-booking-container{
+    overflow: hidden;
+  }
+  .my-bookings {
+    text-align: left;     
+    width: 100%;            
+    margin-top: 40px;    
+    margin-left: 40px;    
+    color: #004030;          
+    font-size: 40px;
+  }
+  .bookings-container {
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-family: 'Instrument serif', sans-serif;
+    color: #004030;
+  }
+
+  .bookings-table th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid #004030;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .bookings-table td {
+      padding: 20px 15px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 18px;
+  }
+
+  .status-confirmed {
+    color: #004030;
+    font-weight: bold;
+    border: 1px solid #004030;
+    padding: 5px 10px;
+    border-radius: 4px;
+ }
+
+  .unit-name-cell {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+ /*ABOUT US*/
+ .abt-text{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding: 0 10%; 
+    z-index: 1;
+  }
+ .about-us{
+    position: relative;
+    min-height: 500px; 
+    color: white;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+ .about-us img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    object-fit:cover; 
+    z-index: -1; 
+    filter: brightness(50%);
+  } 
+ 
+ .group-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    
+  }
+
+.group-div img {
+    width: 100%;            
+    max-width: 600px;      
+    height: auto;          
+    display: block;
+    margin-right: 20px;   
+    box-shadow: 0px 15px 10px 10px rgba(0.3, 0, 0, 0.3);  
 }
 
-*/
+.abtus {
+    width: 50%;
+}
+.abtus h2{
+    text-align: left;
+    font-size: 40px;
+}
+.abtus-info{
+  margin-top: 40px;
+  font-size: 30px;
+  text-align: justify;
+}
+
 
 /* LOGIN PAGE */
 .login-title {
@@ -354,7 +469,6 @@ body {
     background-color: #004030;
     color: white;
     margin: 0;
-    padding: 20px 40px;
     font-size: 40px;
 }
 
@@ -383,11 +497,6 @@ body {
     margin: 0;
     font-size: 40px;
     color: white;
-}
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .three_units {
@@ -558,9 +667,8 @@ video {
 .unit-header {
   background-color: #004030;
   color: white;
-  padding: 20px 40px;
-
   display: flex;
+  padding: 20px 40px;
   align-items: center;
 }
 
@@ -833,5 +941,4 @@ video {
     font-size: 28px;
   }
 }
-
 

@@ -5,7 +5,7 @@
     <nav class="main-nav">
         <a href="/home">Units</a>
         <a href="/my-bookings">Bookings</a>
-        <a href="#">About</a>
+        <a href="/about">About</a>
     </nav>
 
     <div class="header-actions">
