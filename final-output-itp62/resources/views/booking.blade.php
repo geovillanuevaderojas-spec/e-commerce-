@@ -7,9 +7,7 @@
 </head>
 
 <body>
-    <h1 class="homepage_title">kanlungan.</h1>
-    <button class="log_out" type="submit">Logout</button>
-    <button class="back_btn">Back</button>
+    @include('header')
 
         <div class="details">
 

@@ -7,10 +7,7 @@
 </head>
 <body>
 
-  <header class="unit-header">
-    <h1>kanlungan.</h1>
-    <button class="log_out">Log out</button>
-  </header>
+ @include('header')
   
     <div class="grp-div">
         <img src= "{{ asset('images/Gemini_Generated_Image_q5ber0q5ber0q5be.png') }}"  alt="Group image">   
